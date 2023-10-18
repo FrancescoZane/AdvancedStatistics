@@ -9,4 +9,4 @@ Course unit contents:
 - Monte Carlo methods: rejecion sampling, inversion of cumulative distributions, importance sampling. Metropolis algorithm as example of Markov Chain Monte Carlo. Simulated annealing
 - the R framework and language for applied statistics.
 
-Exam: weekly exercises in R and development of a final project
+Exam: weekly exercises in R and development of a final project.
