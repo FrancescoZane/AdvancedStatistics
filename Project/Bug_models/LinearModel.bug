@@ -1,0 +1,16 @@
+model {
+# Likelihood:
+	for (i in 1:length(Medio)){
+		Medio[i] ~ dnorm(mu[i], tau);
+		mu[i] <- alpha + beta * Anno[i];
+		p[i] <- dnorm(Medio[i], mu[i], tau);
+	}
+# Priors:
+	alpha ~ dunif(-5, 30);
+	beta ~ dunif(-1, 1);
+	sigma ~ dunif(0, 100);
+	tau <- 1 / (sigma * sigma); 
+	
+Bf <- prod(p);
+}
+

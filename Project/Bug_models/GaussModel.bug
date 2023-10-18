@@ -1,0 +1,11 @@
+model {
+# Likelihood:
+	for (i in 1:length(dati)){
+		dati[i] ~ dnorm(mu, tau) 
+	}
+	
+# Priors:
+	mu ~ dunif(-2, 2) 
+	sigma ~ dunif(0, 100) # standard deviation
+	tau <- 1 / (sigma * sigma) 
+}
